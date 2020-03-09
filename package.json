@@ -1,6 +1,6 @@
 {
   "name": "myhttprequest",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "",
   "main": "request.js",
   "devDependencies": {
@@ -23,5 +23,9 @@
   ],
   "author": "kimiko88",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/kimiko88/myhttprequest.git"
+  }
 }
