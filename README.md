@@ -1,5 +1,7 @@
 # MyHttpRequest
 
+[![Build Status](https://travis-ci.org/kimiko88/myhttprequest.svg?branch=master)](https://travis-ci.org/kimiko88/myhttprequest) [![Coverage Status](https://coveralls.io/repos/github/kimiko88/myhttprequest/badge.svg)](https://coveralls.io/github/kimiko88/myhttprequest)
+
 A simple library to send HTTP request.
 
 ### Installing
