@@ -60,5 +60,8 @@ describe('request', () => {
         assert.equal(res.code, 200)
     })
 
-
+    it('getSize', async () => {
+        var res = await request.getSize('https://jsonplaceholder.typicode.com/posts/1')
+        assert.equal(res, "292")
+    })
 })

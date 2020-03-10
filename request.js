@@ -35,7 +35,7 @@ const requests = {
             const bodyResponse = body.toString('utf8')
             if (response.headers['content-type'].startsWith('application/json')) {
               try {
-                resolve({ data: JSON.parse(bodyResponse), headers: response.headers, code: response.statusCode })
+                resolve({ data: bodyResponse ? JSON.parse(bodyResponse) : undefined, headers: response.headers, code: response.statusCode })
               } catch (err) {
                 console.error(err)
                 resolve(undefined)
@@ -62,7 +62,7 @@ const requests = {
       var form = querystring.stringify(bodyData)
       headers['content-length'] = form.length
       return form
-    } else if ((headers['content-type'] && headers['content-type'].startsWith('application/json')) || (headers['Content-Type'] && headers['Content-Type'].startsWith('application/json'))|| (headers['Content-type'] && headers['Content-type'].startsWith('application/json'))) {
+    } else if ((headers['content-type'] && headers['content-type'].startsWith('application/json')) || (headers['Content-Type'] && headers['Content-Type'].startsWith('application/json')) || (headers['Content-type'] && headers['Content-type'].startsWith('application/json'))) {
       return JSON.stringify(bodyData)
     }
     return bodyData
