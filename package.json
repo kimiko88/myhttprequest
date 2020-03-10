@@ -20,7 +20,7 @@
     "test": "nyc mocha",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "start": "node request.js",
-    "coveralls": "npm run cover -- --report lcovonly"
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "http",
